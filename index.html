@@ -1,1 +1,16 @@
-Hello
+<html>
+  <head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById("send-button").addEventListener("click", function() {
+          let app = window.Telegram.WebApp;
+          app.sendData("{'test':'Hello'}");    
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" id="send-button" value="Send" />
+  </body>
+</html>
